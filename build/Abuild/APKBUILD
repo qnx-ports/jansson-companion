@@ -2,7 +2,7 @@
 # Maintainer: Aaron Bassett <abassett@qnx.com>
 pkgname=jansson
 pkgver=2.14.1
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="lightweight JSON library"
 url="http://www.digip.org/jansson/"
 arch="all"
@@ -33,6 +33,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 4c6fdf2efa74788fd1711d44293991346d70d22178109b3309ada079f59c30bd716f91e976235c40c640b177d82919a0e13d264ee714d359db266e2f1078c953  jansson-2.14.1.tar.gz
 "
